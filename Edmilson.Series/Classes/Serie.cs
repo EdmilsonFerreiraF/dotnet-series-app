@@ -38,5 +38,9 @@ namespace Edmilson.Series
         public void Delete() {
             this.Deleted = true;
         }
+
+        public bool returnDeleted() {
+            return this.Deleted;
+        }
     }
 }

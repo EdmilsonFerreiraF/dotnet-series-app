@@ -100,7 +100,9 @@ namespace Edmilson.Series
             }
 
             foreach (var serie in list) {
-                Console.WriteLine("#ID {0}:   {1}", serie.returnId(), serie.returnTitle());
+                var deleted = serie.returnDeleted();
+                
+                Console.WriteLine("#ID {0}: - {1} {2}", serie.returnId(), serie.returnTitle(), (deleted ? "*Deleted*" : ""));
             }
         }
 
