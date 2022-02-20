@@ -17,7 +17,7 @@ namespace Edmilson.Series
                         ListSeries();
                         break;
                     case "2":
-                        // InsertSeries();
+                        InsertSerie();
                         break;
                     case "3":
                         // UpdateSeries();
@@ -56,6 +56,36 @@ namespace Edmilson.Series
             foreach (var serie in list) {
                 Console.WriteLine("#ID {0}:   {1}", serie.returnId(), serie.returnTitle());
             }
+        }
+
+        private static void InsertSerie() {
+            Console.WriteLine("Inserir nova série");
+
+            foreach (int i in Enum.GetValues(typeof(Gender))) {
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Gender), i));
+            }
+
+            Console.WriteLine("Digite o gênero entre as opções acima: ");
+            int genderInput = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o Titulo da Série: ");
+            string titleInput = Console.ReadLine();
+
+            Console.Write("Digite o Ano de Início da Série: ");
+            int yearInput = int.Parse(Console.ReadLine());
+            
+            Console.Write("Digite o Ano de Início da Série: ");
+            string descriptionInput = Console.ReadLine();
+
+            Serie newSerie = new Serie(
+                id: repository.NextId(),
+                gender: (Gender)genderInput,
+                title: titleInput,
+                year: yearInput,
+                description: descriptionInput
+            );
+
+            repository.Insert(newSerie);
         }
 
 
