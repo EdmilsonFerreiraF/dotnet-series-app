@@ -26,7 +26,7 @@ namespace Edmilson.Series
                         DeleteSerie();
                         break;
                     case "5":
-                        // ViewSerie();
+                        ViewSerie();
                         break;
                     case "C":
                         Console.Clear();
@@ -48,6 +48,15 @@ namespace Edmilson.Series
             int serieIndex = int.Parse(Console.ReadLine());
 
             repository.Delete(serieIndex);
+        }
+
+        private static void ViewSerie() {
+            Console.Write("Digite o id da série: ");
+            int serieIndex = int.Parse(Console.ReadLine());
+
+            var serie = repository.ReturnById(serieIndex);
+
+            Console.WriteLine(serie);
         }
 
         private static void UpdateSerie() {
