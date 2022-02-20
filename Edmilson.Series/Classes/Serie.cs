@@ -2,26 +2,34 @@ namespace Edmilson.Series
 {
     public class Serie : BaseEntity
     {
-        private Genero Genero { get; set; }
-        private string Titulo { get; set; }
-        private string Descricao { get; set; }
-        private int Ano { get; set; }
+        private Gender Gender { get; set; }
+        private string Title { get; set; }
+        private string Description { get; set; }
+        private int Year { get; set; }
 
-        public Serie(int id, Genero genero, string titulo, string descricao, int ano){
+        public Serie(int id, Gender gender, string title, string description, int year){
             this.Id = id;
-            this.Genero = genero;
-            this.Titulo = titulo;
-            this.Descricao = descricao;
-            this.Ano = ano;
+            this.Gender = gender;
+            this.Title = title;
+            this.Description = description;
+            this.Year = year;
         }
 
         public override string ToString() {
             string retorno = "";
-            retorno += "Gênero: " + this.Genero + Environment.NewLine;
-            retorno += "Titulo: " + this.Titulo + Environment.NewLine;
-            retorno += "Descrição: " + this.Descricao + Environment.NewLine;
-            retorno += "Ano de Início: " + this.Ano;
+            retorno += "Gender: " + this.Gender + Environment.NewLine;
+            retorno += "Title: " + this.Title + Environment.NewLine;
+            retorno += "Description: " + this.Description + Environment.NewLine;
+            retorno += "Launch year: " + this.Year;
             return retorno;
+        }
+
+        public string returnTitle() {
+            return this.Title;
+        }
+
+        public int returnId() {
+            return this.Id;
         }
     }
 }
