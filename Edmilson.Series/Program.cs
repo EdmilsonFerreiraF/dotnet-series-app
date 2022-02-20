@@ -4,6 +4,7 @@ namespace Edmilson.Series
 {
     class Program
     {
+        static SerieRepository repository = new SerieRepository();
         static void Main(string[] args)
         {
             string userChoice = GetUserChoice();
@@ -16,16 +17,16 @@ namespace Edmilson.Series
                         ListSeries();
                         break;
                     case "2":
-                        InsertSeries();
+                        // InsertSeries();
                         break;
                     case "3":
-                        UpdateSeries();
+                        // UpdateSeries();
                         break;
                     case "4":
-                        DeleteSeries();
+                        // DeleteSeries();
                         break;
                     case "5":
-                        ViewSeries();
+                        // ViewSeries();
                         break;
                     case "C":
                         Console.Clear();
@@ -37,9 +38,24 @@ namespace Edmilson.Series
 
                 userChoice = GetUserChoice();
             }
-            
+
             Console.WriteLine("Obrigado por utilizar nossos serviços.");
             Console.ReadLine();
+        }
+
+        private static void ListSeries() {
+            Console.WriteLine("List series");
+
+            var list = repository.List();
+
+            if (list.Count == 0) {
+                Console.WriteLine("Nenhuma série cadastrada.");
+                return;
+            }
+
+            foreach (var serie in list) {
+                Console.WriteLine("#ID {0}:   {1}", serie.returnId(), serie.returnTitle());
+            }
         }
 
 
