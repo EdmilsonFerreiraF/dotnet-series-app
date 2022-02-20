@@ -23,10 +23,10 @@ namespace Edmilson.Series
                         UpdateSerie();
                         break;
                     case "4":
-                        // DeleteSeries();
+                        DeleteSerie();
                         break;
                     case "5":
-                        // ViewSeries();
+                        // ViewSerie();
                         break;
                     case "C":
                         Console.Clear();
@@ -41,6 +41,13 @@ namespace Edmilson.Series
 
             Console.WriteLine("Obrigado por utilizar nossos serviços.");
             Console.ReadLine();
+        }
+
+        private static void DeleteSerie() {
+            Console.Write("Digite o id da série: ");
+            int serieIndex = int.Parse(Console.ReadLine());
+
+            repository.Delete(serieIndex);
         }
 
         private static void UpdateSerie() {
