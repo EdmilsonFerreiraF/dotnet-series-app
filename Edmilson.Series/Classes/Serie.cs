@@ -6,6 +6,7 @@ namespace Edmilson.Series
         private string Title { get; set; }
         private string Description { get; set; }
         private int Year { get; set; }
+        private bool Deleted {get; set;}
 
         public Serie(int id, Gender gender, string title, string description, int year){
             this.Id = id;
@@ -13,6 +14,7 @@ namespace Edmilson.Series
             this.Title = title;
             this.Description = description;
             this.Year = year;
+            this.Deleted = false;
         }
 
         public override string ToString() {
@@ -30,6 +32,10 @@ namespace Edmilson.Series
 
         public int returnId() {
             return this.Id;
+        }
+
+        public void Delete() {
+            this.Deleted = true;
         }
     }
 }

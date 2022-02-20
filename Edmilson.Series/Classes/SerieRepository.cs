@@ -6,34 +6,35 @@ namespace Edmilson.Series
 {
     public class SerieRepository : IRepository<Serie>
     {
-        public void Update(int id, Serie entity)
+        private List<Serie> serieList = new List<Serie>();
+        public void Update(int id, Serie obj)
         {
-            throw new NotImplementedException();
+            serieList[id] = obj;
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            serieList[id].Delete();
         }
 
-        public void Insert(Serie entity)
+        public void Insert(Serie obj)
         {
-            throw new NotImplementedException();
+            serieList.Add(obj);
         }
 
         public List<Serie> List()
         {
-            throw new NotImplementedException();
+            return serieList;
         }
 
         public int NextId()
         {
-            throw new NotImplementedException();
+            return serieList.Count;
         }
 
         public Serie ReturnById(int id)
         {
-            throw new NotImplementedException();
+            return serieList[id];
         }
     }
 }
