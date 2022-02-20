@@ -1,0 +1,15 @@
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\bin\Debug\net6.0\Edmilson.Series.exe
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\bin\Debug\net6.0\Edmilson.Series.deps.json
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\bin\Debug\net6.0\Edmilson.Series.runtimeconfig.json
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\bin\Debug\net6.0\Edmilson.Series.dll
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\bin\Debug\net6.0\ref\Edmilson.Series.dll
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\bin\Debug\net6.0\Edmilson.Series.pdb
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.csproj.AssemblyReference.cache
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.AssemblyInfoInputs.cache
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.AssemblyInfo.cs
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.csproj.CoreCompileInputs.cache
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.dll
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\ref\Edmilson.Series.dll
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.pdb
+C:\Users\Edmilson\Downloads\dotnet-series-app\Edmilson.Series\obj\Debug\net6.0\Edmilson.Series.genruntimeconfig.cache

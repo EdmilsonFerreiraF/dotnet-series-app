@@ -20,7 +20,7 @@ namespace Edmilson.Series
                         InsertSerie();
                         break;
                     case "3":
-                        // UpdateSeries();
+                        UpdateSerie();
                         break;
                     case "4":
                         // DeleteSeries();
@@ -41,6 +41,36 @@ namespace Edmilson.Series
 
             Console.WriteLine("Obrigado por utilizar nossos serviços.");
             Console.ReadLine();
+        }
+
+        private static void UpdateSerie() {
+            Console.Write("Digite o id da série.");
+            int serieIndex = int.Parse(Console.ReadLine());
+
+            foreach (int i in Enum.GetValues(typeof(Gender))) {
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Gender), i));
+            }
+
+            Console.Write("Digite o Gênero entre as opções acima: ");
+            int genderInput = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o Titulo da Série: ");
+            string titleInput = Console.ReadLine();
+
+            Console.Write("Digite o Ano de Início da Série");
+            int yearInput = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a Descrição da Série");
+            string descriptionInput = Console.ReadLine();
+
+            Serie updateSerie = new Serie(id: serieIndex,
+            gender: (Gender)genderInput,
+            title: titleInput,
+            year: yearInput,
+            description: descriptionInput
+            );
+
+            repository.Update(serieIndex, updateSerie);
         }
 
         private static void ListSeries() {
@@ -74,7 +104,7 @@ namespace Edmilson.Series
             Console.Write("Digite o Ano de Início da Série: ");
             int yearInput = int.Parse(Console.ReadLine());
             
-            Console.Write("Digite o Ano de Início da Série: ");
+            Console.Write("Digite a descrição da Série: ");
             string descriptionInput = Console.ReadLine();
 
             Serie newSerie = new Serie(

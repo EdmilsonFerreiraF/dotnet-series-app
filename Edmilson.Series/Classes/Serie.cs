@@ -22,7 +22,8 @@ namespace Edmilson.Series
             retorno += "Gender: " + this.Gender + Environment.NewLine;
             retorno += "Title: " + this.Title + Environment.NewLine;
             retorno += "Description: " + this.Description + Environment.NewLine;
-            retorno += "Launch year: " + this.Year;
+            retorno += "Launch year: " + this.Year + Environment.NewLine;
+            retorno += "Deleted: " + this.Deleted;
             return retorno;
         }
 
